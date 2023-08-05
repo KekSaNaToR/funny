@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hehe</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        
+        <input class="btn" type="button" onclick="jumpscare(); var el = document.getElementById('fullscreen'); el.requestFullscreen(); " value="dont click" >   
+        <div class="fullscreen" id="fullscreen">
+            <img id="gnome" class="image" src="https://static.wikia.nocookie.net/mike-emil-game-and-video/images/f/fa/Noggin_Gnomed.png/revision/latest?cb=20200202053019" alt="">
+            <audio id="scream" src="./media_GsOvBYj.mp3" />
+        </div>
+    </div>
+
+    <style>
+        #gnome {
+    visibility: hidden;
+}
+
+#second {
+    visibility: hidden;
+}
+
+.image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.element {
+    padding: 20px;
+    height: 300px;
+    width: 100%;
+    background-color: skyblue;
+    box-sizing: border-box;
+}
+
+.element:fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.btn {
+    width: 200px;
+    height: 200px;
+    font-size: 30px;
+    align-items: center;
+}
+    </style>
+    
+    <script>
+        function jumpscare() {
+            var jumpscare = document.getElementById("gnome");
+            jumpscare.style.visibility="visible";
+            var audio = document.getElementById("scream")
+            audio.play();
+        }
+    </script>
+</body>
+</html>
